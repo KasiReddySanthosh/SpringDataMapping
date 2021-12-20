@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en" xmlns:th="http://www.thymeleaf.org">
+<head>
+<meta charset="ISO-8859-1">
+<title>Employees List</title>
+<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" 
+        integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm"
+        crossorigin="anonymous">
+</head>
+<body>
+<div>
+    <h2>Customers List</h2>
+    <hr>
+    <table  border="1">
+        <thead>
+          <tr>
+            <th>Id</th>
+            <th>Name</th>
+            <th>Email</th>
+            <th>Gender</th>
+            <th>ProductId</th>
+            <th>ProductName</th>
+            <th>Quantity</th>
+            <th>Price</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr th:each="customer:${listCustomers}">
+            <td th:text="{customer.id}"></td>
+            <td th:text="{customer.name}"></td>
+            <td th:text="{customer.email}"></td>
+            <td th:text="{customer.gender}"></td>
+            <td th:text="{customer.productId}"></td>
+            <td th:text="{customer.productName}"></td>
+            <td th:text="{customer.quantity}"></td>
+            <td th:text="{customer.price}"></td>
+          </tr>
+        </tbody>
+    </table>
+</div>
+</body>
+</html>
